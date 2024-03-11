@@ -15,7 +15,7 @@ func main() {
 	serveWeb()
 }
 
-//struc to pass into the templage
+// struc to pass into the templage
 type defaultContext struct {
 	Title       string
 	ErrorMsgs   string
@@ -69,7 +69,7 @@ func getThemeName() string {
 	return "bs4"
 }
 
-//--------------------------------------------------------------
+// --------------------------------------------------------------
 // Retrieve all fils under the given folder and its subsequent folder
 func populateStaticPages() *template.Template {
 	result := template.New("templates")
@@ -98,8 +98,8 @@ func populateStaticPages() *template.Template {
 
 //--------------------------------------------------------------
 
-//--------------------------------------------------------------
-//Serve Resources of types js, img, css files
+// --------------------------------------------------------------
+// Serve Resources of types js, img, css files
 func serveResource(w http.ResponseWriter, req *http.Request) {
 	path := "public/" + themeName + req.URL.Path
 	var contentType string
