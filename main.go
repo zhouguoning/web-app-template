@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"log"
 	"net/http"
 	"os"
@@ -13,6 +14,7 @@ import (
 
 func main() {
 	serveWeb()
+	keepAlive()
 }
 
 // struc to pass into the templage
@@ -127,4 +129,6 @@ func serveResource(w http.ResponseWriter, req *http.Request) {
 	}
 }
 
-//--------------------------------------------------------------
+func keepAlive() {
+	fmt.Println("Application is Up and Running... Press Ctrl+C to stop.")
+}
