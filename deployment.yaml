@@ -24,6 +24,9 @@ apiVersion: v1
 kind: Service
 metadata:
   name: my-app-service
+  annotations: 
+    service.beta.kubernetes.io/aws-load-balancer-subnets: subnet-0695d853bb27e0249,subnet-0a33ca15a56edae1f,subnet-0978d58220326ffdf
+    service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
 spec:
   selector:
     app: my-app
