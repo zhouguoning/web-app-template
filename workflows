@@ -1,0 +1,11 @@
+ls -l
+https://www.digitalocean.com/robots.txt
+
+step1
+curl https://www.digitalocean.com/robots.txt --output robots.txt
+
+step2 
+ls -l
+
+step3
+cat robots.txt
